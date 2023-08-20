@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cQr36a+uRym1+FduhJD5+dAWhQ+bHQno7OrdQPTyVBFHESPJxP0eO4mlUhSgw/gAEgecMbQTVad+yTlM4JMOxg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jason\\source\\repos\\WalkerAcademy\\WalkerAcademy\\WalkerAcademy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jason\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

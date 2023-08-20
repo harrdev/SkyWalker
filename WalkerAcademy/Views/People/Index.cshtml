@@ -1,0 +1,20 @@
+﻿@model List<Person>
+
+<h1>People Databank</h1>
+<br />
+
+<div id="search-area">
+    <h2>Search People</h2>
+    <input type="text" id="search" placeholder="Search by name..." />
+</div>
+<br />
+
+<ul id="itemList"></ul>
+
+<button class="btn btn-primary" id="prevButton">Previous</button>
+<button class="btn btn-primary" id="nextButton">Next</button>
+
+<script>
+    var allItems = @Html.Raw(Json.Serialize(Model));
+</script>
+<script src="~/js/site.js"></script>

@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">SkyWalker Academy</h1>
+    <p>Rebel Alliance Databank</p>
+    <br />
+</div>
+
+<div class="spinner-overlay" id="spinner">
+    <div class="spinner-content">
+        <span>Loading...</span>
+        <div class="spinner-border text-info"></div>
+    </div>
+</div>
+
+<div class="d-flex flex-wrap justify-content-center menu">
+    <div class="menu-item">
+        <span>People</span>
+        <div id="people" class="me-3 mb-3"></div>
+    </div>
+    <div class="menu-item">
+        <span>Creatures</span>
+        <div id="creatures" class="me-3 mb-3"></div>
+    </div>
+    <div class="menu-item">
+        <span>Droids</span>
+        <div id="droids" class="me-3 mb-3"></div>
+    </div>
+    <div class="menu-item">
+        <span>Locations</span>
+        <div id="locations" class="me-3 mb-3"></div>
+    </div>
+    <div class="menu-item">
+        <span>Organizations</span>
+        <div id="organizations" class="me-3 mb-3"></div>
+    </div>
+    <div class="menu-item">
+        <span>Species</span>
+        <div id="species" class="me-3 mb-3"></div>
+    </div>
+    <div class="menu-item">
+        <span>Vehicles</span>
+        <div id="vehicles" class="me-3 mb-3"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (e) => {
+
+        function showSpinner() {
+            const spinner = document.getElementById("spinner");
+            spinner.style.display = "block";
+        }
+
+        const findPeopleBtn = document.getElementById("people");
+            findPeopleBtn.addEventListener("click", function(e) {
+                showSpinner();
+                window.location.href = 'https://localhost:7068/People/Index';
+            });
+
+        const findLocationBtn = document.getElementById("locations");
+            findLocationBtn.addEventListener("click", function(e) {
+                showSpinner();
+                window.location.href = 'https://localhost:7068/Location/Index';
+            });
+
+    });
+</script>
