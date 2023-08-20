@@ -66,5 +66,11 @@
                 window.location.href = 'https://localhost:7068/Location/Index';
             });
 
+        const findCreaturesBtn = document.getElementById("creatures");
+            findCreaturesBtn.addEventListener("click", function(e) {
+                showSpinner();
+                window.location.href = 'https://localhost:7068/Creature/Index';
+            });
+
     });
 </script>
