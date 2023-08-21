@@ -90,5 +90,11 @@
                 window.location.href = 'https://localhost:7068/Species/Index';
             });
 
+        const findVehiclesBtn = document.getElementById("vehicles");
+            findVehiclesBtn.addEventListener("click", function(e) {
+                showSpinner();
+                window.location.href = 'https://localhost:7068/Vehicle/Index';
+            });
+
     });
 </script>
