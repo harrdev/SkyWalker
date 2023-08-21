@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
-using WalkerAcademy.Models;
+using WalkerAcademy.Models.WebApiModel;
 
 namespace WalkerAcademy.Controllers
 {
@@ -56,7 +56,6 @@ namespace WalkerAcademy.Controllers
                 };
                 _cache.Set(cacheKey, allLocations, cacheOptions);
             }
-            System.Diagnostics.Debug.WriteLine(allLocations.Count);
             return View(allLocations);
         }
 
