@@ -28,7 +28,7 @@ function displayPage(page, searchTerm = '') {
         $('#itemList').append(
             `
                    <li>
-                          <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modal-${filteredItems[i].id}">${filteredItems[i].name}</a>
+                          <a href="#" class="text-decoration-none item-link" data-bs-toggle="modal" data-bs-target="#modal-${filteredItems[i].id}">${filteredItems[i].name}</a>
 
                       <!-- Bootstrap Modal -->
                           <div class="modal fade" id="modal-${filteredItems[i].id}" tabindex="-1">
@@ -41,7 +41,9 @@ function displayPage(page, searchTerm = '') {
                                   <div class="modal-body">
                                      <p>${filteredItems[i].description}</p>
                                      <br />
-                                     <img src="${filteredItems[i].image}" style="width: 90%; height: 45%" alt="${filteredItems[i].name} image">
+                                     <div class="item-image d-flex justify-content-center">
+                                        <img src="${filteredItems[i].image}" style="width: 90%; height: 45%" alt="${filteredItems[i].name} image">
+                                     </div>
                                   </div>
                                   <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

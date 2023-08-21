@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\jason\\source\\repos\\WalkerAcademy\\WalkerAcademy\\wwwroot\\img\\background.jpg",
+      "PackagePath": "staticwebassets\\img\\background.jpg"
+    },
+    {
       "Id": "C:\\Users\\jason\\source\\repos\\WalkerAcademy\\WalkerAcademy\\wwwroot\\img\\creature.jpg",
       "PackagePath": "staticwebassets\\img\\creature.jpg"
     },

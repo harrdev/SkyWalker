@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H1JRPhceiT5OunNcHCGhVQhA7EK70Wk3xkVKi3OT5Xk=",
+  "Hash": "P1haCXQvjtkSsilIJdis5l0mCRVLkgcvAe6VS5R47pw=",
   "Source": "WalkerAcademy",
   "BasePath": "_content/WalkerAcademy",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\jason\\source\\repos\\WalkerAcademy\\WalkerAcademy\\wwwroot\\img\\background.jpg",
+      "SourceId": "WalkerAcademy",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jason\\source\\repos\\WalkerAcademy\\WalkerAcademy\\wwwroot\\",
+      "BasePath": "_content/WalkerAcademy",
+      "RelativePath": "img/background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\background.jpg"
     },
     {
       "Identity": "C:\\Users\\jason\\source\\repos\\WalkerAcademy\\WalkerAcademy\\wwwroot\\img\\creature.jpg",
