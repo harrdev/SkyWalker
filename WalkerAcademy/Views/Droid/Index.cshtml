@@ -9,12 +9,79 @@
 </div>
 <br />
 
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createDroidModal">Create Droid</button>
+<br />
+
 <ul id="itemList"></ul>
 
 <button class="btn btn-primary" id="prevButton">Previous</button>
 <button class="btn btn-primary" id="nextButton">Next</button>
 
+<!-- Create Droid Modal -->
+<div class="modal fade" id="createDroidModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create Droid</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="createDroidForm">
+                    <div class="mb-3">
+                        <label for="droidName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="droidName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="droidDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="droidDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="droidImage" class="form-label">Image URL</label>
+                        <input type="text" class="form-control" id="droidImage" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveDroidButton">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
     var allItems = @Html.Raw(Json.Serialize(Model));
+
+    $("#saveDroidButton").click(function() {
+    var droidData = {
+        Name: $("#droidName").val(),
+        Description: $("#droidDescription").val(),
+        Image: $("#droidImage").val()
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "/Droid/CreateDroid",
+        data: droidData,
+        success: function(response) {
+            if (response.success) {
+                alert('Droid saved successfully!');
+
+                window.location.reload();
+                $('#createDroidModal').modal('hide');
+
+                // Reset the form
+                $("#createDroidForm")[0].reset();
+            } else {
+                alert('There was an error saving the droid.');
+            }
+        },
+        error: function() {
+            alert('There was an error connecting to the server.');
+        }
+    });
+});
+
 </script>
 <script src="~/js/site.js"></script>

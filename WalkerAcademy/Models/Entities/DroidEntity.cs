@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using WalkerAcademy.Models.WebApiModel;
 
 namespace WalkerAcademy.Models.Entities
 {
@@ -13,5 +14,16 @@ namespace WalkerAcademy.Models.Entities
         public string? Image { get; set; }
         public string UserId { get; set; }
         public virtual User User { get; set; }
+
+        public Droid ToApiModel()
+        {
+            return new Droid
+            {
+                Id = this.Id.ToString(),
+                Name = this.Name,
+                Description = this.Description,
+                Image = this.Image
+            };
+        }
     }
 }
